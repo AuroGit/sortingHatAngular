@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'sortingHatAngular';
+
+  API_Url = 'https://hp-api.onrender.com/api/characters/house/';
 }

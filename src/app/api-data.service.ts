@@ -1,0 +1,13 @@
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ApiDataService {
+
+  constructor() { }
+
+  getData() {
+    console.log('Data');
+  }
+}
