@@ -1,0 +1,138 @@
+[
+   {
+      "id": 1,
+      "question": "¿Qué te parece mejor?",
+      "options": [
+         { "title": "Tener el control",
+            "value": "{\"g\":0, \"s\":25, \"r\":10, \"h\": 5}" },
+         { "title": "Controlar las cosas importantes cuando sea necesario",
+            "value": "{\"g\":5, \"s\":0, \"r\":20, \"h\": 15}" },
+         { "title": "Dejar que todo fluya solo",
+            "value": "{\"g\":20, \"s\":0, \"r\":5, \"h\": 15}" }
+      ]
+   },
+   {
+      "id": 2,
+      "question": "Elige una de estas cualidades:",
+      "options": [
+         { "title": "Eficiencia",
+            "value": "{\"g\":0, \"s\":10, \"r\":25, \"h\": 5}" },
+         { "title": "Arrojo",
+            "value": "{\"g\":25, \"s\":10, \"r\":5, \"h\": 0}" },
+         { "title": "Determinación",
+            "value": "{\"g\":5, \"s\":25, \"r\":5, \"h\": 5}" },
+         { "title": "Calma",
+            "value": "{\"g\":0, \"s\":5, \"r\":10, \"h\": 25}" }
+      ]
+   },
+   {
+      "id": 3,
+      "question": "Siempre tengo la cabeza...",
+      "options": [
+         { "title": "...en el pasado",
+            "value": "{\"g\":0, \"s\":5, \"r\":25, \"h\": 10}" },
+         { "title": "...en el ahora, vivo el momento",
+            "value": "{\"g\":25, \"s\":5, \"r\":5, \"h\": 5}" },
+         { "title": "...en el futuro",
+            "value": "{\"g\":5, \"s\":25, \"r\":10, \"h\": 0}" },
+         { "title": "...en las nubes",
+            "value": "{\"g\":10, \"s\":0, \"r\":5, \"h\": 25}" }
+      ]
+   },
+   {
+      "id": 4,
+      "question": "¿Cual de estos roles eligirías?",
+      "options": [
+         { "title": "Gobernador",
+            "value": "{\"g\":5, \"s\":25, \"r\":10, \"h\": 0}" },
+         { "title": "Soldado",
+            "value": "{\"g\":25, \"s\":10, \"r\":5, \"h\": 0}" },
+         { "title": "Aldeano",
+            "value": "{\"g\":10, \"s\":0, \"r\":5, \"h\": 25}" },
+         { "title": "Erudito",
+            "value": "{\"g\":0, \"s\":10, \"r\":25, \"h\": 5}" }
+      ]
+   },
+   {
+      "id": 5,
+      "question": "¿Crees que el fin justifica los medios?",
+      "options": [
+         { "title": "Siempre",
+            "value": "{\"g\":5, \"s\":30, \"r\":5, \"h\": 0}" },
+         { "title": "Nunca",
+            "value": "{\"g\":25, \"s\":0, \"r\":5, \"h\": 10}" },
+         { "title": "Depende, hay fines que sí justifican ciertos medios",
+            "value": "{\"g\":10, \"s\":0, \"r\":15, \"h\": 15}" }
+      ]
+   },
+   {
+      "id": 6,
+      "question": "Elige un lugar:",
+      "options": [
+         { "title": "En medio de la naturaleza",
+            "value": "{\"g\":10, \"s\":5, \"r\":0, \"h\": 25}" },
+         { "title": "El casco antigüo de una gran ciudad",
+            "value": "{\"g\":5, \"s\":25, \"r\":10, \"h\": 0}" },
+         { "title": "Conduciendo por una carretera que se pierde en el horizonte",
+            "value": "{\"g\":25, \"s\":10, \"r\":5, \"h\": 0}" },
+         { "title": "En una habitación luminosa, cómoda donde mantener la mente ocupada",
+            "value": "{\"g\":0, \"s\":5, \"r\":25, \"h\": 10}" }
+      ]
+   },
+   {
+      "id": 7,
+      "question": "Cuando tengo un problema...",
+      "options": [
+         { "title": "...lo enfrento hasta superarlo",
+            "value": "{\"g\":25, \"s\":10, \"r\":5, \"h\": 0}" },
+         { "title": "...busco la forma de volverlo en mi favor",
+            "value": "{\"g\":5, \"s\":25, \"r\":10, \"h\": 0}" },
+         { "title": "...intento superarlo sólo si decido que merece la pena",
+            "value": "{\"g\":0, \"s\":10, \"r\":20, \"h\": 10}" },
+         { "title": "...prefiero ignorarlo esperando que se solucione con el tiempo",
+            "value": "{\"g\":0, \"s\":10, \"r\":5, \"h\": 25}" }
+      ]
+   },
+   {
+      "id": 8,
+      "question": "Prefiero pasar el tiempo...",
+      "options": [
+         { "title": "...en una fiesta rodead@ de gente",
+            "value": "{\"g\":25, \"s\":10, \"r\":0, \"h\": 5}" },
+         { "title": "...con mis mejores amigos",
+            "value": "{\"g\":10, \"s\":0, \"r\":5, \"h\": 25}" },
+         { "title": "...leyendo o haciendo algo creativo",
+            "value": "{\"g\":5, \"s\":0, \"r\":25, \"h\": 10}" },
+         { "title": "...con gente interesante en un ambiente mas selecto",
+            "value": "{\"g\":5, \"s\":25, \"r\":10, \"h\": 0}" }
+      ]
+   },
+   {
+      "id": 9,
+      "question": "¿Cómo crees que te ven los demas?",
+      "options": [
+         { "title": "Parezco seri@ de primeras, hasta que cojo confianza",
+            "value": "{\"g\":25, \"s\":5, \"r\":10, \"h\": 0}" },
+         { "title": "De confianza pero no confiad@",
+            "value": "{\"g\":0, \"s\":25, \"r\":5, \"h\": 10}" },
+         { "title": "Cercan@ y amable",
+            "value": "{\"g\":10, \"s\":0, \"r\":5, \"h\": 25}" },
+         { "title": "Inteligente y un poco exquisit@",
+            "value": "{\"g\":5, \"s\":10, \"r\":25, \"h\": 0}" }
+      ]
+   },
+   {
+      "id": 10,
+      "question": "¿Qué animal sería tu Patronus?",
+      "options": [
+         { "title": "Un animal carnívoro",
+            "value": "{\"g\":25, \"s\":10, \"r\":5, \"h\": 0}" },
+         { "title": "Un ave majestuosa",
+            "value": "{\"g\":0, \"s\":5, \"r\":25, \"h\": 10}" },
+         { "title": "Una bestia mitológica",
+            "value": "{\"g\":10, \"s\":25, \"r\":5, \"h\": 0}" },
+         { "title": "Un animal hervívoro",
+            "value": "{\"g\":10, \"s\":0, \"r\":5, \"h\": 25}" }
+      ]
+   }
+]
