@@ -1,0 +1,27 @@
+<nav id="navbar">
+   <div id="main-menu" class="main-nav">
+      <a routerLink="home">Inicio</a>
+      <a routerLink="quiz">Sombrero Seleccionador</a>
+      <a *ngIf="!userService.user?.house" [routerLink]="['common-room']">
+         Sala Común
+      </a>
+      <a *ngIf="userService.user?.house"
+         [routerLink]="['common-room/',
+            userService.user != undefined ? 
+            userService.user.house : '']">
+         Sala Común
+      </a>
+   </div>
+   <burger-menu id="mobile-menu"></burger-menu>
+
+   <div class="session-nav">
+      <a *ngIf="!userService.isLogged" routerLink="sign-in">
+         Regístrate
+      </a>
+      <div *ngIf="userService.isLogged" class="account-nav">
+         @{{userService.user.userName}}
+         <img src="assets/default-alumns/new-alumn.png" width="50px">
+         <button (click)="logOut()">Cerrar Sesión</button>
+      </div>
+   </div> 
+</nav>

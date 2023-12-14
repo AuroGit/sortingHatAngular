@@ -1,0 +1,48 @@
+<div class="char-container">
+   <img class="char-img" [src]="char?.image" width="200px"
+   [ngStyle]="{'--color':borderColor}"
+   />
+   
+   <div class="name-container">
+      <img width="200px" class="ribbon" src="../../../assets/resources/hand-drawn-ribbon-banner.png" alt="">
+      <div class="name" [ngStyle]="char.ancestry ? {} : {'bottom':'25px'}">
+         <h2>{{char?.name | translate}}</h2>
+         <h3 *ngIf="char?.hogwartsStudent" class="role">Estudiante</h3>
+         <h3 *ngIf="char?.hogwartsStaff" class="role">{{char?.gender == 'male' ? 'Profesor' : 'Profesora' }}</h3>
+      </div>
+   </div>
+   
+   <div class="data">
+      <p *ngIf="char?.dateOfBirth" class="date">
+         <strong>Fecha de nacimiento:</strong> {{char.dateOfBirth}}</p>
+      <p *ngIf="char?.ancestry" class="ancestry">
+         <strong>Ascendencia:</strong> {{char.ancestry | translate: char.gender}}</p>
+      <p class="species" *ngIf="char?.species && char.species != 'human'">
+         <strong>Especie:</strong> {{char.species | translate: char.gender}}</p>
+      <p *ngIf="char?.gender" class="gender">
+         <strong>Género:</strong> {{char.gender | translate}}</p>
+      <p *ngIf="char?.eyeColour" class="eyes">
+         <strong>Color de ojos:</strong> {{char.eyeColour  | translate: 'eye'}}</p>
+      <p *ngIf="char?.hairColour" class="hair">
+         <strong>Color de pelo:</strong> {{char.hairColour  | translate}}</p>
+      <p *ngIf="char?.patronus" class="patronus">
+         <strong>Patronus:</strong> {{char.patronus | translate}}</p>
+      
+      <div *ngIf="char?.wand.wood || char?.wand.core || char?.wand.length"
+      class="wand">
+         <strong>Varita:</strong>
+         <ul>
+            <li class="wood">
+               Madera de {{(char.wand.wood ? char.wand.wood : '???') | translate}}
+            </li>
+            <li class="core">
+               Núcleo de {{(char.wand.core ? char.wand.core : '???') | translate}}
+            </li>
+            <li class="length">
+               {{char.wand.length ? char.wand.length + ' cm' : '???'}}
+            </li>
+         </ul>
+      </div>
+   </div>
+   
+</div>

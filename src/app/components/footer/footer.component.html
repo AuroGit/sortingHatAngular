@@ -1,0 +1,36 @@
+<div class="footer-btn">
+   <img src="assets/resources/Remembrall.png" width="100px"
+   (click)="toggleFooter()">
+   <h3 class="footer-heading" (click)="toggleFooter()">
+      Users de prueba
+   </h3>
+</div>
+<div class="footer-content" [ngClass]="show ? 'show-ftr' : ''">
+   <ul class="preset-users">
+      <li style="color: #fcc">
+         <p>Usuario: godric</p>
+         <p>Contraseña: gryffindor</p>
+         <p>(Usuario de Gryffindor)</p>
+      </li>
+      <li style="color: #ffa">
+         <p>Usuario: helga</p>
+         <p>Contraseña: hufflepuff</p>
+         <p>(Usuario de Hufflepuff)</p>
+      </li>
+      <li style="color: #ccf">
+         <p>Usuario: rowena</p>
+         <p>Contraseña: ravenclaw</p>
+         <p>(Usuario de Ravenclaw)</p>
+      </li>
+      <li style="color: #cfc">
+         <p>Usuario: salazar</p>
+         <p>Contraseña: slytherin</p>
+         <p>(Usuario de Slytherin)</p>
+      </li>
+      <li>
+         <p>Usuario: alumno</p>
+         <p>Contraseña: hogwarts</p>
+         <p>(Usuario sin casa)</p>
+      </li>
+   </ul>
+</div>

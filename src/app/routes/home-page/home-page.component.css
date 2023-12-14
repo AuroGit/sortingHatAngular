@@ -1,0 +1,10 @@
+.container { display: grid; place-items: center; }
+
+.container login { width: min(100%, 500px); }
+
+footer {
+   position: absolute;
+   bottom: 0;
+   color: #fff;
+   width: 100%;
+}

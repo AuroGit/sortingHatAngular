@@ -1,0 +1,33 @@
+#loader { animation: timeTurnerZ 2s infinite linear; }
+#loader + h2 { color: #fff; }
+.loader-ring {
+   --size: 100px;
+   display: grid;
+   width: var(--size);
+   height: var(--size);
+   border: solid 5px #dc8;
+   border-radius: 50%;
+   margin: auto;
+}
+#loader > .loader-ring {
+   --size: 85px;
+   animation: timeTurnerX 2s infinite linear;
+}
+.loader-ring .loader-inner-sandclock {
+   width: 92%;
+   margin: auto;
+   animation: timeTurnerY 2s .5s infinite linear;
+}
+
+@keyframes timeTurnerX {
+   from { transform: rotateX(0deg); }
+   to { transform: rotateX(360deg); }
+}
+@keyframes timeTurnerY {
+   from { transform: rotateY(0deg); }
+   to { transform: rotateY(360deg); }
+}
+@keyframes timeTurnerZ {
+   from { transform: rotate(0deg); }
+   to { transform: rotate(180deg); }
+}

@@ -1,0 +1,48 @@
+<div class="container ">
+   <div id="quiz" class="container pergamine">
+      <div class="main-heading">
+         <img src="assets/resources/flourish.png" width="50px" style="transform: scaleX(-1);"/>
+         <h2>Ceremonia de Selección</h2>
+         <img src="assets/resources/flourish.png" width="50px"/>
+      </div>
+      <hr>
+      <button id="start-btn" class="magic-btn" *ngIf="quizState == 0" (click)="nextStep()">
+         Empezar
+      </button>
+
+      <div class="question" [ngClass]="fadeClass" *ngIf="quizState > 0 && 
+         quizState <= questionsArr.length">
+         
+         <h3 class="q-order">
+            {{questionsArr[quizState - 1]?.id + '/' + questionsArr.length}}
+         </h3>
+         <p class="q-title">{{questionsArr[quizState - 1]?.question}}</p>
+         <ul class="q-option-list">
+            <li class="q-option" *ngFor="let op of questionsArr[quizState - 1]?.options">
+               <label>
+                  <input type="radio" [value]="op.value"
+                  (change)="setAnswer($event)" name="answer"/>
+                     <p>{{op.title}}</p>
+               </label>
+            </li>
+         </ul>
+
+         <button [id]="quizState == questionsArr.length && 'finish-btn'"
+         [disabled]="currentAnswer ? false : true"
+         [ngClass]="quizState < questionsArr.length ?
+         'next-btn' : 'magic-btn'" (click)="nextStep()">
+            {{quizState < questionsArr.length ?
+            'Siguiente' : 'Finalizar'}}
+            <img *ngIf="quizState < questionsArr.length" height="30px" src="../../../assets/resources/Flourishy-Frame-next.png">
+         </button>
+      </div>
+
+      <div class="result" *ngIf="quizState > questionsArr.length">
+         <div>
+            <p>Tu casa es: </p>
+            <h3 [ngStyle]="{'color':resultColor}">{{house | titlecase}}</h3>
+            <button class="magic-btn" routerLink="/home">Volver</button>
+         </div>
+      </div>
+   </div>
+</div>

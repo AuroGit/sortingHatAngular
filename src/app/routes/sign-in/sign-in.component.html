@@ -1,0 +1,66 @@
+<div class="container">
+   <form id="signin-form" class="pergamine" [formGroup]="signInForm" (ngSubmit)="registerUser(signInForm.value)">
+      <div class="main-heading">
+         <img src="assets/resources/flourish.png" width="50px" style="transform: scaleX(-1);"/>
+         <h2>Regístrate</h2>
+         <img src="assets/resources/flourish.png" width="50px"/>
+      </div>
+      <input placeholder="Nombre" formControlName="userName">
+      <span class="form-alert-msg"
+      *ngIf="signInForm.controls.userName.touched && !signInForm.controls.userName.valid">
+         *Campo requerido
+      </span>
+      <span class="form-alert-msg error" *ngIf="signInForm.errors?.['userAlreadyExistsError']">
+         El usuario Ya Existe! Nombre no disponible.
+      </span>
+
+      <input placeholder="E-mail" formControlName="email">
+      <span class="form-alert-msg"
+      *ngIf="signInForm.controls.email.touched && !signInForm.controls.email.value">
+         *Campo requerido
+      </span>
+      <span class="form-alert-msg error"
+      *ngIf="signInForm.controls.email.touched && 
+      !signInForm.controls.email.valid && signInForm.controls.email.value">
+         E-mail no válido!
+      </span>
+
+      <password formControlName="password" [placeholder]="'Contraseña'">
+      </password>
+      <span class="form-alert-msg" *ngIf="signInForm.controls.password.touched &&
+         signInForm.controls.password.invalid">
+            *Campo requerido
+      </span>
+      <span *ngIf="signInForm.controls.password.dirty &&
+         signInForm.errors?.['minCharsError']">
+            {{signInForm.errors?.['minCharsError'] ?
+            '8+ caracteres' : ''}}
+      </span>
+      <span *ngIf="signInForm.controls.password.dirty &&
+         signInForm.errors?.['lowercaseMissingError']">
+            {{signInForm.errors?.['lowercaseMissingError'] ?
+            '1+ minúscula' : ''}}
+      </span>
+      <span *ngIf="signInForm.controls.password.dirty &&
+         signInForm.errors?.['uppercaseMissingError']">
+            {{signInForm.errors?.['uppercaseMissingError'] ?
+            '1+ mayúscula' : ''}}
+      </span>
+      <span *ngIf="signInForm.controls.password.dirty &&
+         signInForm.errors?.['numberMissingError']">
+            {{signInForm.errors?.['numberMissingError'] ?
+            '1+ caracter/es numérico/s' : ''}}
+      </span>
+
+      <password formControlName="confirmPassword" [placeholder]="'Confirmar contraseña'">
+      </password>
+      <span class="form-alert-msg error" 
+      *ngIf="signInForm.controls.confirmPassword.touched">
+         {{signInForm.errors?.['passwordMismatchError'] && 'No coincide!'}}
+      </span>
+
+      <button class="magic-btn" [disabled]="!signInForm.valid">
+         Registrar
+      </button>
+   </form>
+</div>

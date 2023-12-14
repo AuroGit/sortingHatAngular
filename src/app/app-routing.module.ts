@@ -1,16 +1,42 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './routes/home-page/home-page.component';
-import { LoginPageComponent } from './routes/login-page/login-page.component';
+import { SignInComponent } from './routes/sign-in/sign-in.component';
+import { QuizPageComponent } from './routes/quiz-page/quiz-page.component';
+import { CommonRoomPageComponent } from './routes/common-room-page/common-room-page.component';
+import { PageNotFoundComponent } from './routes/page-not-found/page-not-found.component';
+import { onlyLoggedGuard } from './guards/only-logged.guard';
+import { leavingAdviceGuard } from './guards/leaving-advice.guard';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomePageComponent
+    redirectTo: 'home',
+    pathMatch: 'full'
   },
   {
-    path: 'login',
-    component: LoginPageComponent
+    path: 'home',
+    component: HomePageComponent
+  }, {
+    path: 'sign-in',
+    component: SignInComponent,
+    canDeactivate: [leavingAdviceGuard]
+  }, {
+    path: 'quiz',
+    component: QuizPageComponent,
+    canActivate: [onlyLoggedGuard],
+    canDeactivate: [leavingAdviceGuard]
+  }, {
+    path: 'common-room',
+    component: CommonRoomPageComponent,
+    canActivate: [onlyLoggedGuard]
+  }, {
+    path: 'common-room/:house',
+    component: CommonRoomPageComponent,
+    canActivate: [onlyLoggedGuard]
+  }, {
+    path: '**',
+    component: PageNotFoundComponent
   }
 ];
 

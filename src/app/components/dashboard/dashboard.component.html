@@ -1,0 +1,27 @@
+<div id="dashboard" class="pergamine">
+   <h2 class="welcome main-heading">
+      <img src="assets/resources/flourish.png" width="50px" style="transform: scaleX(-1);"/>
+      Bienvenido a Hogwarts, {{userName | titlecase}}
+      <img src="assets/resources/flourish.png" width="50px"/>
+   </h2>
+   <div *ngIf="userHouse; else notSorted">
+      <p>
+         Alumn@ de
+         <span class="user-house" [ngStyle]="{'color':houseColor}">
+            {{userHouse | titlecase}}
+         </span>
+      </p> 
+      <button *ngIf="userHouse" class="magic-btn magic-btn-lg"
+         [routerLink]="'/common-room/' + userHouse">
+            Ir a la Sala Común
+      </button>
+   </div>
+
+
+   <ng-template #notSorted>
+      <h3>Aún no perteneces a ninguna Casa.</h3>
+      <button class="magic-btn magic-btn-lg" routerLink="/quiz">
+         Ir a Ceremonia de Selección
+      </button>
+   </ng-template>
+</div>

@@ -1,0 +1,38 @@
+<div class="modal-container" [ngClass]="fadeClass">
+   <div class="modal pergamine">
+      <img src="../../../assets/resources/howler.png"
+         class="howler" *ngIf="type!='character'">
+      <div class="modal-message" *ngIf="type == 'alert'">
+         <p class="msg">Inicia Sesión para acceder a esta sección.</p>
+         <p>O <strong>
+            <a routerLink="/sign-in">Regístrate</a>
+         </strong> si aún no eres Alumno de Hogwarts.</p>
+         
+         <button (click)="closeModal()">Cerrar</button>
+      </div>
+
+      <div class="modal-message" *ngIf="type == 'confirm'">
+         <div class="msg">
+            <p>Los datos del formulario se perderan</p>
+            <p>¿Seguro que quieres Salir?</p>
+         </div>
+
+         <button (click)="confirm(true)">Salir</button>
+         <strong>
+            <a (click)="confirm(false)">Cancelar</a>
+         </strong>
+      </div>
+
+      <div class="modal-message" *ngIf="type == 'signed'">
+         <p class="msg">Usuario registrado con éxito.</p>
+         
+         <button (click)="closeModal()" routerLink="/home">Aceptar</button>
+      </div>
+
+      <div class="modal-message" [ngStyle]="{'margin-top':'0'}" *ngIf="type == 'character'">
+         <char-component [char]="char"></char-component>
+         
+         <button (click)="closeModal()">Cerrar</button>
+      </div>
+   </div>
+</div>

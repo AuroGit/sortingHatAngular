@@ -1,0 +1,26 @@
+#signin-form { gap: 10px; }
+
+#signin-form .magic-btn { padding: 30px; }
+
+.container { display: grid; place-items: center; }
+.container #signin-form { width: min(100%, 500px); }
+
+#signin-form :has(.password-input) {
+   display: block;
+   width: min(300px, 100%);
+}
+
+#signin-form > *:not(span) { margin-top: 25px; }
+
+#signin-form button {
+   display: block;
+   padding: 40px;
+   font-size: 1.2rem;
+   transition: all 1s;
+}
+#signin-form button[disabled] {
+   opacity: .15;
+   color: transparent;
+   cursor: pointer;
+}
+#signin-form button:not([disabled]):hover { opacity: 1; }

@@ -1,0 +1,36 @@
+#login-form .password-input { display: flex; position: relative; }
+.password-input button {
+   position: absolute;
+   right: 0; bottom: 0;
+   padding: 0;
+   background: none;
+   border: none;
+   border-bottom: solid 1px #000;
+   background-image: radial-gradient(transparent, transparent);
+   transition: all .5s;
+}
+.password-input button:hover {
+   background-image: radial-gradient(#fffc, transparent 75%);
+}
+
+#login-form .form-actions {
+   margin-top: 25px;
+   display: grid;
+   place-items: center;
+   gap: 20px;
+}
+#login-form .form-actions button {
+   display: block;
+   padding: 40px;
+   font-size: 1.2rem;
+   transition: all 1s;
+}
+#login-form .form-actions button[disabled] {
+   opacity: .1;
+   color: transparent;
+   cursor: pointer;
+}
+.form-actions button:not([disabled]):hover { opacity: 1; }
+
+#login-form .form-actions a { transition: color .5s; }
+#login-form .form-actions a:hover { color: #800; }

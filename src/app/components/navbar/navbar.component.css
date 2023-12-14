@@ -1,0 +1,49 @@
+#navbar {
+   padding: 10px 20px;
+   background-color: var(--eigengrau);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 10px;
+   font-size: 1.2rem;
+}
+#navbar *:not(button) { font-family: 'Ibarra Real Nova'; color: #fff; }
+
+.main-nav { display: flex; gap: 20px; }
+#navbar a { text-decoration: none; color: #fff; }
+#navbar a:hover {
+   animation: linkHover 1s alternate infinite;
+   transition: color .2s;
+}
+
+.account-nav {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   color: #fff;
+}
+.account-nav button {
+   background: none;
+   color: #fff;
+   border: solid 1px #fff;
+   font-weight: 600;
+   padding-inline: 10px;
+   border-radius: 20px;
+   transition: all 1s;
+}
+.account-nav button:hover {
+   background-color: #fff;
+   color: var(--eigengrau);
+}
+
+@keyframes linkHover {
+   from { color: #ffc; }
+   to { color: #fffa; }
+}
+
+@media screen and (max-width: 719px) {
+   #navbar #main-menu { display: none; }
+}
+@media screen and (min-width: 720px) {
+   #navbar #mobile-menu { display: none; }
+}

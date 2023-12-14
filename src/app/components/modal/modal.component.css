@@ -1,0 +1,68 @@
+.modal-container {
+   position: fixed;
+   display: grid;
+   inset: 0;
+   padding: 50px;
+   background-color: #16161dcc;
+}
+
+.modal {
+   margin: auto;
+   position: relative;
+   padding: 50px;
+   width: max(50%, 300px);
+}
+
+.howler {
+   position: absolute;
+   width: 200px;
+   margin-inline: auto;
+   top: -80px;
+   filter: drop-shadow(0 0 10px var(--eigengrau));
+   transform-origin: center bottom;
+   animation: howling 2s infinite;
+}
+
+.modal-message {
+   display: grid;
+   place-items: center;
+   gap: 10px;
+   width: 100%;
+   margin-top: 50px;
+}
+
+.modal p { color: #000; text-align: center; }
+.modal a {
+   text-decoration: underline;
+   cursor: pointer;
+   transition: color .5s;
+}
+.modal a:hover { color: #800; }
+.modal button {
+   opacity: .5;
+   background: none;
+   border: none;
+   padding: 30px;
+   margin-top: 50px;
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-image: url('../../../assets/resources/btn-frame.png');
+   color: #800;
+   font-size: 1.5rem;
+   transition: opacity .5s;
+}
+.modal button:hover { opacity: 1; }
+
+@keyframes howling {
+   0% { transform: scaleY(1) rotate(0); }
+   25% { transform: scaleY(1.2) rotate(-5deg); }
+   50% { transform: scaleY(1) rotate(0); }
+   75% { transform: scaleY(1.2) rotate(5deg); }
+   100% { transform: scaleY(1) rotate(0); }
+}
+
+.modal:has(.char-container) { padding-inline: 0; }
+.modal:has(.char-container) button { margin-top: 0; }
+
+char-component { width: 100%; }

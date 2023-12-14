@@ -1,10 +1,9 @@
-<header>
-   <h1>Sorting Hat</h1>
-   <nav>
-      <a [routerLink]="'/'">Home</a>
-      <br>
-      <a [routerLink]="'login'">Login</a>
-   </nav>
-</header>
-
-<router-outlet></router-outlet>
+<div id="background" [ngStyle]="{ 'background-image' : bgURL }">
+   <header id="header">
+      <navbar></navbar>
+      <img src="assets/sorting-hat-logo.png" alt="logo" id="main-logo">
+   </header>
+   
+   <router-outlet></router-outlet>
+   <modal-msg *ngIf="modalOps.show" [type]="modalOps.type" [char]="modalOps.char"></modal-msg>
+</div>

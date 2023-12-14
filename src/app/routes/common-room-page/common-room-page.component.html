@@ -1,0 +1,36 @@
+<div class="container">
+   <div id="house-members">
+      <div *ngIf="!house" class="not-sorted pergamine">
+         <div class="main-heading">
+            <img src="assets/resources/flourish.png" width="50px" style="transform: scaleX(-1);"/>
+            <h2>No tienes una casa asignada</h2>
+            <img src="assets/resources/flourish.png" width="50px"/>
+         </div>
+         <button class="magic-btn magic-btn-lg" routerLink="/quiz">
+            Ir a Ceremonia de Selección
+         </button>
+      </div>
+      <div *ngIf="house && charsArr" class="pergamine">
+         <main class="main-content">
+            <div class="main-heading">
+               <img src="assets/resources/flourish.png" width="50px" style="transform: scaleX(-1);"/>
+               <h2>Miembros de {{house | titlecase}}</h2>
+               <img src="assets/resources/flourish.png" width="50px"/>
+            </div>
+            <hr>
+            <ul class="members">
+               <li class="char"
+               *ngFor="let char of charsArr; index as i"
+               [ngStyle]="{'--d':i/10 + 's'}"
+               (click)="showChar(char)">
+                  {{char.name}}
+               </li>
+            </ul>
+         </main>
+      </div>
+   </div>
+</div>
+
+<div class="loader-container" *ngIf="!charsArr" [ngClass]="fadeClass">
+   <loader></loader>
+</div>
