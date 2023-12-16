@@ -114,5 +114,5 @@ button:not(.magic-btn, [disabled]) { cursor: pointer; }
 .fadein { animation: fadeIn .5s ease-in forwards; }
 .fadeout { animation: fadeOut .5s ease-out backwards; }
 
-.main-heading { display: flex; align-items: center; gap: 5px; }
+.main-heading { display: flex; justify-content: center; align-items: center; gap: 5px; }
 .main-heading h2 { text-align: center; }
