@@ -1,4 +1,6 @@
 .footer-btn {
+   position: absolute;
+   bottom: 0;
    display: flex;
    align-items: center;
    padding: 20px;
@@ -20,6 +22,10 @@
    font-family: 'Quintessential', serif;
 }
 
+@media screen and (max-width:670px) {
+   .footer-heading { display: none; }
+}
+
 .footer-content {
    width: 100%;
    padding: 0 20px;
@@ -31,6 +37,13 @@
    overflow: hidden;
 }
 .show-ftr { bottom: unset; }
+
+.footer-content h3 {
+   font-family: 'Quintessential', serif;
+   font-size: 1.5rem;
+   margin-top: 20px;
+   text-decoration: underline;
+}
 
 .preset-users {
    margin: 20px auto;
