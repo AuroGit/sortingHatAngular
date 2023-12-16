@@ -33,7 +33,8 @@
          'next-btn' : 'magic-btn'" (click)="nextStep()">
             {{quizState < questionsArr.length ?
             'Siguiente' : 'Finalizar'}}
-            <img *ngIf="quizState < questionsArr.length" height="30px" src="../../../assets/resources/Flourishy-Frame-next.png">
+            <img *ngIf="quizState < questionsArr.length"
+               height="30px" src="assets/resources/Flourishy-Frame-next.png">
          </button>
       </div>
 
