@@ -40,7 +40,6 @@
 }
 .name * { line-height: 1; }
 
-/* .wand ul { list-style: none; } */
 .wand li { margin-left: 20px; }
 
 @keyframes floating {
