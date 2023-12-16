@@ -5,8 +5,8 @@
    
    <div class="name-container">
       <img width="200px" class="ribbon" src="assets/resources/hand-drawn-ribbon-banner.png" alt="">
-      <div class="name" [ngStyle]="char.hogwartsStaff ||
-      char.hogwartsStudent ? {} : {'bottom':'20px'}">
+      <div class="name" [ngStyle]="!char.hogwartsStaff &&
+      !char.hogwartsStudent ? {'bottom':'20px'} : {}">
          <h2>{{char?.name | translate}}</h2>
          <h3 *ngIf="char?.hogwartsStudent" class="role">Estudiante</h3>
          <h3 *ngIf="char?.hogwartsStaff" class="role">{{char?.gender == 'male' ? 'Profesor' : 'Profesora' }}</h3>
