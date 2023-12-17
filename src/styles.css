@@ -19,7 +19,7 @@
 body { background-color: var(--eigengrau); }
 
 h1, h2, h3, h4 {
-   font-family: 'Enchanted Land';
+   font-family: 'Enchanted Land', serif;
    font-weight: 400;
 }
 h2 { font-size: 2.5rem; }
