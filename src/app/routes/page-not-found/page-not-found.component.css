@@ -7,7 +7,7 @@
 
 .content {
    position: relative;
-   width: max(50%, 300px);
+   width: max(30%, 300px);
    display: grid;
    place-items: center;
    padding: 50px 20px 100px;
